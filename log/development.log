@@ -999,3 +999,30 @@ Processing by SchoolClassesController#show as HTML
   Parameters: {"id"=>"1"}
   [1m[36mSchoolClass Load (0.4ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered school_classes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 42ms (Views: 23.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/school_classes/1/edit" for 100.1.168.30 at 2018-12-21 22:17:42 +0000
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSchoolClass Load (0.1ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered school_classes/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/school_classes/1" for 100.1.168.30 at 2018-12-21 22:17:48 +0000
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vf9qCMxyAJ2yVDa8agXJlToHJYZZpkmH3sadlm+l7QZ03EkdfQCPy2RlcLBxuQeKJIWvZ3ohkKx01si6Eoq8nw==", "school_class"=>{"title"=>"the class!", "room_number"=>"12"}, "commit"=>"Update School class", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "school_classes" SET "title" = ? WHERE "school_classes"."id" = ?[0m  [["title", "the class!"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Redirected to http://67.205.188.72:49750/school_classes/1
+Completed 302 Found in 46ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/school_classes/1" for 100.1.168.30 at 2018-12-21 22:17:48 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered school_classes/show.html.erb within layouts/application (0.1ms)
