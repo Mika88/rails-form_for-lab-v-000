@@ -783,3 +783,11 @@ Processing by StudentsController#show as HTML
   [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
   Rendered students/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/3" for 100.1.168.30 at 2018-12-21 22:05:56 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 15.1ms | ActiveRecord: 1.5ms)
