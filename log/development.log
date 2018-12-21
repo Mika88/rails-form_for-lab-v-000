@@ -394,3 +394,4 @@ Processing by StudentsController#show as HTML
   Parameters: {"id"=>"3"}
   [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
   Rendered students/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 14.1ms | ActiveRecord: 0.3ms)
