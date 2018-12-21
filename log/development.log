@@ -976,3 +976,26 @@ ActionView::MissingTemplate (Missing template school_classes/new, application/ne
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (57.4ms)
+
+
+Started GET "/school_classes/new" for 100.1.168.30 at 2018-12-21 22:17:21 +0000
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 307ms (Views: 305.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for 100.1.168.30 at 2018-12-21 22:17:36 +0000
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zyi+N3d0mX0z75rljYW00GbuxXa6D9jGuk1VBt15xiTuC50ixgYWK+Xe3OmWOXrPeGxPl5mIAe0QXQAqoFaXvQ==", "school_class"=>{"title"=>"the class", "room_number"=>"12"}, "commit"=>"Create School class"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "school_classes" ("title", "room_number") VALUES (?, ?)[0m  [["title", "the class"], ["room_number", 12]]
+  [1m[35m (2.3ms)[0m  commit transaction
+Redirected to http://67.205.188.72:49750/school_classes/1
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/school_classes/1" for 100.1.168.30 at 2018-12-21 22:17:36 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.4ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered school_classes/show.html.erb within layouts/application (0.9ms)
